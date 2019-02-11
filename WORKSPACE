@@ -17,6 +17,13 @@ workspace(name = "io_bazel_rules_python")
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 
+register_toolchains(
+	"//python/toolchains:linux_py_toolchain",
+	"//python/toolchains:dummy_py_toolchain",
+	#"//python/toolchains:dummy_py_runtime_toolchain",
+	"//python/toolchains:py_local_2.7.15_py_runtime_toolchain",
+)
+
 ################################
 # Skydoc and its dependencies. #
 ################################

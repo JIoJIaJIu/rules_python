@@ -15,6 +15,9 @@ package(default_visibility = ["//visibility:public"])
 
 licenses(["notice"])  # Apache 2.0
 
+toolchain_type(name = "toolchain_type")
+toolchain_type(name = "runtime_toolchain_type")
+
 exports_files([
     "pip.bzl",
     "python.bzl",
